@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Satisfyc | Satisfaction Survey form Wizard</title>
+	<link href="css/style.css" rel="stylesheet">
+	</head>
+
+<body class="style_3">
+	
+
+	<header>
+	    <div class="container-fluid">
+	        <div class="row">
+	            <div class="col-5">
+	                <a href="Accueil.html"><img src="img/logo.png" alt="" width="500" height="505"></a>
+	            </div>
+			</div>
+	    </div>
+	
+	</header>
+	
+	<div class="wrapper_centering">
+	    <div class="container_centering">
+	        <div class="container">
+	            <div class="row justify-content-between">
+	                <div class="col-xl-6 col-lg-6 d-flex align-items-center">
+	                    <div class="main_title_1">
+	                        <h3><img src="img/cs.png" width="80" height="80" alt=""> Questionnaire de satisfaction</h3>
+	                        <p>Ce questionnaire nous permettra d'avoir l'avis de la communauté csgo sur le jeu.</p>
+	                        <p><em>- Valve Corporation</em></p>
+	                    </div>
+	                </div>
+	      
+	                <div class="col-xl-5 col-lg-5">
+	                    <div id="wizard_container">
+	                        <div id="top-wizard">
+	                            <div id="progressbar"></div>
+	                        </div>
+	                        
+	                        <form id="wrapped" method="POST" autocomplete="off">
+	                            <input id="website" name="website" type="text" value="">
+	                           
+	                            <div id="middle-wizard">
+
+	                                <div class="step">
+	                                    <h3 class="main_question"><strong>1 sur 15</strong>Êtes vous satisfait des matchmaking?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_1" name="question_1" class="required" value="Very bad<" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio very_bad" for="very_bad_1">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_1" name="question_1" class="required" value="Bad" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio bad" for="bad_1">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_1" name="question_1" class="required" value="Average" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio average" for="average_1">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_1" name="question_1" class="required" value="Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio good" for="good_1">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_1" name="question_1" class="required" value="Very Good" onchange="getVals(this, 'question_1');">
+	                                                    <label class="radio very_good" for="very_good_1">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label1">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label1" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+	                            
+
+	                               <div class="step">
+	                                    <h3 class="main_question"><strong>2 sur 15</strong>Êtes vous satisfait des maps?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_2" name="question_2" class="required" value="Very bad<" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio very_bad" for="very_bad_2">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_2" name="question_2" class="required" value="Bad" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio bad" for="bad_2">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_2" name="question_2" class="required" value="Average" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio average" for="average_2">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_2" name="question_2" class="required" value="Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio good" for="good_2">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_2" name="question_2" class="required" value="Very Good" onchange="getVals(this, 'question_2');">
+	                                                    <label class="radio very_good" for="very_good_2">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label2">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label2" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+	                           
+
+	                                <div class="step">
+	                                    <h3 class="main_question"><strong>3 sur 15</strong>Êtes vous satisfait du système anti triche?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_3" name="question_3" class="required" value="Very bad<" onchange="getVals(this, 'question_3');">
+	                                                    <label class="radio very_bad" for="very_bad_3">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_3" name="question_3" class="required" value="Bad" onchange="getVals(this, 'question_3');">
+	                                                    <label class="radio bad" for="bad_3">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_3" name="question_3" class="required" value="Average" onchange="getVals(this, 'question_3');">
+	                                                    <label class="radio average" for="average_3">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_3" name="question_3" class="required" value="Good" onchange="getVals(this, 'question_3');">
+	                                                    <label class="radio good" for="good_3">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_3" name="question_3" class="required" value="Very Good" onchange="getVals(this, 'question_3');">
+	                                                    <label class="radio very_good" for="very_good_3">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label3">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label3" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+	                             
+
+	                               <div class="step">
+	                                    <h3 class="main_question"><strong>4 sur 15</strong>Êtes-vous satisfait des serveurs ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_4" name="question_4" class="required" value="Very bad<" onchange="getVals(this, 'question_4');">
+	                                                    <label class="radio very_bad" for="very_bad_4">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_4" name="question_4" class="required" value="Bad" onchange="getVals(this, 'question_4');">
+	                                                    <label class="radio bad" for="bad_4">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_4" name="question_4" class="required" value="Average" onchange="getVals(this, 'question_4');">
+	                                                    <label class="radio average" for="average_4">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_4" name="question_4" class="required" value="Good" onchange="getVals(this, 'question_4');">
+	                                                    <label class="radio good" for="good_4">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_4" name="question_4" class="required" value="Very Good" onchange="getVals(this, 'question_4');">
+	                                                    <label class="radio very_good" for="very_good_4">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label4">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label4" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+	                                
+									  <div class="step">
+	                                    <h3 class="main_question"><strong>5 sur 15</strong>Êtes vous satisfait du support ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_5" name="question_5" class="required" value="Very bad<" onchange="getVals(this, 'question_5');">
+	                                                    <label class="radio very_bad" for="very_bad_5">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_5" name="question_5" class="required" value="Bad" onchange="getVals(this, 'question_5');">
+	                                                    <label class="radio bad" for="bad_5">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_5" name="question_5" class="required" value="Average" onchange="getVals(this, 'question_5');">
+	                                                    <label class="radio average" for="average_5">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_5" name="question_5" class="required" value="Good" onchange="getVals(this, 'question_5');">
+	                                                    <label class="radio good" for="good_5">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_5" name="question_5" class="required" value="Very Good" onchange="getVals(this, 'question_5');">
+	                                                    <label class="radio very_good" for="very_good_5">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										     <div class="form-group">
+	                                        <label for="additional_message_label5">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label5" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+										 <div class="step">
+	                                    <h3 class="main_question"><strong>6 sur 15</strong>Les nouveaux skin vous plaisent  ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_6" name="question_6" class="required" value="Very bad<" onchange="getVals(this, 'question_6');">
+	                                                    <label class="radio very_bad" for="very_bad_6">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_6" name="question_6" class="required" value="Bad" onchange="getVals(this, 'question_6');">
+	                                                    <label class="radio bad" for="bad_6">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_6" name="question_6" class="required" value="Average" onchange="getVals(this, 'question_6');">
+	                                                    <label class="radio average" for="average_6">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_6" name="question_6" class="required" value="Good" onchange="getVals(this, 'question_6');">
+	                                                    <label class="radio good" for="good_6">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_6" name="question_6" class="required" value="Very Good" onchange="getVals(this, 'question_6');">
+	                                                    <label class="radio very_good" for="very_good_6">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										     <div class="form-group">
+	                                        <label for="additional_message_label6">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label6" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+											 <div class="step">
+	                                    <h3 class="main_question"><strong>8 sur 15</strong>Êtes vous satisfait du nouveau pass ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_8" name="question_8" class="required" value="Very bad<" onchange="getVals(this, 'question_8');">
+	                                                    <label class="radio very_bad" for="very_bad_8">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_8" name="question_8" class="required" value="Bad" onchange="getVals(this, 'question_8');">
+	                                                    <label class="radio bad" for="bad_8">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_8" name="question_8" class="required" value="Average" onchange="getVals(this, 'question_8');">
+	                                                    <label class="radio average" for="average_8">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_8" name="question_8" class="required" value="Good" onchange="getVals(this, 'question_8');">
+	                                                    <label class="radio good" for="good_8">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_8" name="question_8" class="required" value="Very Good" onchange="getVals(this, 'question_8');">
+	                                                    <label class="radio very_good" for="very_good_8">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Tres mauvais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres bien</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										 <div class="form-group">
+										<label for="additional_message_label8">Commentaire</label>
+										<textarea name="additional_message" id="additional_message_label8" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+									</div>
+	                                </div>
+									<div class="step">
+	                                    <h3 class="main_question"><strong>9 sur 15</strong>A quel fréquence achetez vous des objets en boutique ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_9" name="question_9" class="required" value="Very bad<" onchange="getVals(this, 'question_9');">
+	                                                    <label class="radio very_bad" for="very_bad_9">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_9" name="question_9" class="required" value="Bad" onchange="getVals(this, 'question_9');">
+	                                                    <label class="radio bad" for="bad_9">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_9" name="question_9" class="required" value="Average" onchange="getVals(this, 'question_9');">
+	                                                    <label class="radio average" for="average_9">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_9" name="question_9" class="required" value="Good" onchange="getVals(this, 'question_9');">
+	                                                    <label class="radio good" for="good_9">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_9" name="question_9" class="required" value="Very Good" onchange="getVals(this, 'question_9');">
+	                                                    <label class="radio very_good" for="very_good_9">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label9">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label9" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+									<div class="step">
+	                                    <h3 class="main_question"><strong>10 sur 15</strong>Êtes vous satisfait du taux de récompense dans les caisses ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_10" name="question_10" class="required" value="Very bad<" onchange="getVals(this, 'question_10');">
+	                                                    <label class="radio very_bad" for="very_bad_10">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_10" name="question_10" class="required" value="Bad" onchange="getVals(this, 'question_10');">
+	                                                    <label class="radio bad" for="bad_10">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_10" name="question_10" class="required" value="Average" onchange="getVals(this, 'question_10');">
+	                                                    <label class="radio average" for="average_10">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_10" name="question_10" class="required" value="Good" onchange="getVals(this, 'question_10');">
+	                                                    <label class="radio good" for="good_10">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_10" name="question_10" class="required" value="Very Good" onchange="getVals(this, 'question_10');">
+	                                                    <label class="radio very_good" for="very_good_10">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label10">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label10" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+										<div class="step">
+	                                    <h3 class="main_question"><strong>11 sur 15</strong>Êtes vous satisfait des graphismes du jeu ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_11" name="question_11" class="required" value="Very bad<" onchange="getVals(this, 'question_11');">
+	                                                    <label class="radio very_bad" for="very_bad_11">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_11" name="question_11" class="required" value="Bad" onchange="getVals(this, 'question_11');">
+	                                                    <label class="radio bad" for="bad_11">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_11" name="question_11" class="required" value="Average" onchange="getVals(this, 'question_11');">
+	                                                    <label class="radio average" for="average_11">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_11" name="question_11" class="required" value="Good" onchange="getVals(this, 'question_11');">
+	                                                    <label class="radio good" for="good_11">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_11" name="question_11" class="required" value="Very Good" onchange="getVals(this, 'question_11');">
+	                                                    <label class="radio very_good" for="very_good_11">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="additional_message_label11">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label11" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+									<div class="step">
+	                                    <h3 class="main_question"><strong>12 sur 15</strong>Recommanderiez vous le jeu a vos proches ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_12" name="question_12" class="required" value="Very bad<" onchange="getVals(this, 'question_12');">
+	                                                    <label class="radio very_bad" for="very_bad_12">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_12" name="question_12" class="required" value="Bad" onchange="getVals(this, 'question_12');">
+	                                                    <label class="radio bad" for="bad_12">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_12" name="question_12" class="required" value="Average" onchange="getVals(this, 'question_12');">
+	                                                    <label class="radio average" for="average_12">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_12" name="question_12" class="required" value="Good" onchange="getVals(this, 'question_12');">
+	                                                    <label class="radio good" for="good_12">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_12" name="question_12" class="required" value="Very Good" onchange="getVals(this, 'question_12');">
+	                                                    <label class="radio very_good" for="very_good_12">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										  <div class="form-group">
+	                                        <label for="additional_message_label12">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label12" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+										<div class="step">
+	                                    <h3 class="main_question"><strong>13 sur 15</strong>Êtes vous satisfait de l’utilisation du jeu ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_13" name="question_13" class="required" value="Very bad<" onchange="getVals(this, 'question_13');">
+	                                                    <label class="radio very_bad" for="very_bad_13">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_13" name="question_13" class="required" value="Bad" onchange="getVals(this, 'question_13');">
+	                                                    <label class="radio bad" for="bad_13">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_13" name="question_13" class="required" value="Average" onchange="getVals(this, 'question_13');">
+	                                                    <label class="radio average" for="average_13">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_13" name="question_13" class="required" value="Good" onchange="getVals(this, 'question_13');">
+	                                                    <label class="radio good" for="good_13">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_13" name="question_13" class="required" value="Very Good" onchange="getVals(this, 'question_13');">
+	                                                    <label class="radio very_good" for="very_good_13">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										  <div class="form-group">
+	                                        <label for="additional_message_label13">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label13" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+											<div class="step">
+	                                    <h3 class="main_question"><strong>14 sur 15</strong>En somme êtes vous satisfait du jeu en général  ?</h3>
+	                                    <div class="review_block_numbers">
+	                                    	<ul class="clearfix">
+	                                    		<li>
+	                                    			 <div class="container_numbers">
+	                                                    <input type="radio" id="very_bad_14" name="question_14" class="required" value="Very bad<" onchange="getVals(this, 'question_14');">
+	                                                    <label class="radio very_bad" for="very_bad_14">1</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                    		 <div class="container_numbers">
+	                                                    <input type="radio" id="bad_14" name="question_14" class="required" value="Bad" onchange="getVals(this, 'question_14');">
+	                                                    <label class="radio bad" for="bad_14">2</label>
+	                                                </div>
+	                                    		</li>
+	                                    		<li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="average_14" name="question_14" class="required" value="Average" onchange="getVals(this, 'question_14');">
+	                                                    <label class="radio average" for="average_14">3</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="good_14" name="question_14" class="required" value="Good" onchange="getVals(this, 'question_14');">
+	                                                    <label class="radio good" for="good_14">4</label>
+	                                                </div>
+	                                            </li>
+	                                            <li>
+	                                                <div class="container_numbers">
+	                                                    <input type="radio" id="very_good_14" name="question_14" class="required" value="Very Good" onchange="getVals(this, 'question_14');">
+	                                                    <label class="radio very_good" for="very_good_14">5</label>
+	                                                </div>
+	                                            </li>
+	                                    	</ul>
+	                                    	<div class="row justify-content-between add_bottom_25">
+	                                    		<div class="col-4">
+	                                    			<em>Jamais</em>
+	                                    		</div>
+	                                    		<div class="col-4 text-right">
+	                                    			<em>Tres souvent</em>
+	                                    		</div>
+	                                    	</div>
+	                                    </div>
+										  <div class="form-group">
+	                                        <label for="additional_message_label14">Commentaire</label>
+	                                        <textarea name="additional_message" id="additional_message_label14" class="form-control" style="height:180px;" onkeyup="getVals(this, 'additional_message');"></textarea>
+	                                    </div>
+	                                </div>
+	                                <div class="submit step">
+	                                    <h3 class="main_question"><strong></strong>Information personnelle</h3>
+	                                    <div class="form-group">
+	                                        <label for="firstname">Prenom</label>
+	                                        <input type="text" name="firstname" id="firstname" class="form-control required">
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="lastname">Nom</label>
+	                                        <input type="text" name="lastname" id="lastname" class="form-control required">
+	                                    </div>
+	                                    <div class="form-group">
+	                                        <label for="email">Email</label>
+	                                        <input type="email" name="email" id="email" class="form-control required">
+	                                    </div>
+										 <div class="form-group">
+	                                        <label for="grade">Votre grade</label>
+	                                        <input type="text" name="grade" id="grade" class="form-control">
+	                                    </div>
+	                                    <div class="row">
+	                                        <div class="col-lg-3 col-md-3 col-3">
+	                                            <div class="form-group">
+	                                                <label for="age">Age</label>
+	                                                <input type="text" name="age" id="age" class="form-control">
+	                                            </div>
+	                                        </div>
+										 <div class="col-lg-3 col-md-3 col-3">
+	                                            <div class="form-group">
+	                                                <label for="hdj">Heure de jeu</label>
+	                                                <input type="text" name="age" id="hdj" class="form-control">
+	                                            </div>
+	                                        </div>
+	                                        <div class="col-9">
+	                                            <div class="form-group radio_input">
+	                                                <label class="container_radio">Homme
+	                                                    <input type="radio" name="gender" value="Male" class="required">
+	                                                    <span class="checkmark"></span>
+	                                                </label>
+	                                                <label class="container_radio">Femme
+	                                                    <input type="radio" name="gender" value="Female" class="required">
+	                                                    <span class="checkmark"></span>
+	                                                </label>
+	                                            </div>
+	                                        </div>
+	                                    </div>
+	                                  
+	                               
+	                                </div>
+	                               
+
+	                            </div>
+	                         
+
+	                            <div id="bottom-wizard">
+	                                <button type="button" name="backward" class="backward">Retour</button>
+	                                <button type="button" name="forward" class="forward">Suivant</button>
+	                                <button type="submit" name="process" class="submit">Envoyer</button>
+	                            </div>
+	                          
+
+	                        </form>
+	                    </div>
+
+	                </div>
+
+	            </div>
+	        </div>
+		</div>
+	    </div>
+	   
+	
+    <script src="js/test.js"></script>
+	<script src="js/fonction.js"></script>
+
+</body>
+</html>
